@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,7 +13,7 @@
 		}	
 			
 			#a{
-			position:absolute;	
+	   position:absolute;
 				width: 100px;
 				height: 50px;
 				border:3px solid red;
@@ -129,13 +131,11 @@ button{
 }
 		</style>
 		
-		
 	</head>
 	<body>
 	  <div id="background"></div>
 	  <div id="background1">吴良启大逃杀---黎平八中-716</div>
 	  <div id="background2" onclick="bark()">开始</div>
-	  
 	  <div id="a">吴启航</div>
 	  <div id="c">吴良鼎</div>
 	  <div id="b">你</div>
@@ -143,8 +143,8 @@ button{
 	  <div class="oks"></div>
 	  <div class="jd"></div>
 	  <h1 id="jd">0</h1>
-
 	  <script>
+		  
 		var a = document.querySelector("#a")  
 		   var c = document.querySelector("#c")  
 	            var ok = document.querySelector(".ok")  
@@ -152,7 +152,6 @@ button{
 		            var b = document.querySelector("#b") 
 		              var jd = document.querySelector(".jd")
 		                 var jd1 = document.querySelector("#jd")
-		
 		    var i=0
                var at = 150
 		            var al = 0
@@ -161,39 +160,31 @@ button{
 		                      var bt = 150
 			                    var bl = 300
 			                     var okt=500
-			                      var okl=500
+		  	                      var okl=500
 			                         var okw=0
-                                        var g =0
+                                                   var g =0
 function bark(){
-	
 	var back1= document.querySelector("#background")
 	 var back2 = document.querySelector("#background1") 
 	  var back3 = document.querySelector("#background2")
 	    back1.style.display="none"
 	     back2.style.display="none"
 	      back3.style.display="none"
-	 
 	 window.addEventListener("keydown",function(e){
 	 	if(e.keyCode==38){
 	 		bt-=10
 	 		b.style.top=bt+"px"
-	 		
-	 	}else if(e.keyCode==40){
-	 		
+	 	}else if(e.keyCode==40){ 		
 	 		bt+=10
 	 		b.style.top=bt+"px"
 	 	}else if(e.keyCode==39){
 	 		bl+=10
 	 	    b.style.left=bl+"px"
-	 		
 	 	}else if(e.keyCode==37){
-	 		
 	 		bl-=10
-	 		b.style.left=bl+"px"
+	         	b.style.left=bl+"px"
 	 	}
-	 	
 	 },false)
-
 	var time2=setInterval(()=>{
 	if(bt>at){
 		at+=1
@@ -206,8 +197,7 @@ function bark(){
 		al-=1
 	}
 	var s=bt-at
-	var v = bl-al
-		
+	var v = bl-al		
 		a.style.top=at+"px"
 		a.style.left=al+"px"
 	},15)
@@ -225,8 +215,7 @@ function bark(){
 
 		c.style.top=ct+"px"
 		c.style.left=cl+"px"
-	},12)
-	
+	},12)	
 }
 var pygame = setInterval(()=>{
 	if((bt>=okt&&bl>=okl)&&(bt<=okt+50&&bl<=okl+50)){
@@ -236,23 +225,21 @@ var pygame = setInterval(()=>{
            g+=""
 	        jd.style.display="block"
                jd1.style.display="block"
-	                jd1.innerHTML=g[0]+g[1]+"%"
+                            if(g>=10){
+	                         jd1.innerHTML=g[0]+g[1]+"%"
+                           }else{
+                                   jd1.innerHTML=g[0]+"%"         
+                                      }
 	                   oks.style.width=okw+"px"
 	  if(okw>=100){
-		
 		  window.location.href="http://yangtongyon.github.io/jiege"
-		  
-		             
 	  }
 	}
 	if((at==bt&&al==bl)||(ct==bt&&cl==bl)){
 		document.body.innerHTML="<h1>你已失败"
 		           clearInterval(pygame)
-
 	}
 },1)
-
 	  </script>
-		 
 		  </body>
 </html>

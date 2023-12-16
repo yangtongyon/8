@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>关于游戏</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background: #e7f58d;
+			}
+			h1{
+				font-size:6vw;
+				color:rgba(235,161,36,0.48);
+			}
+			p{
+				font-size:3vw;
+				margin-top:5px;
+				color: rgba(95,91,116,0.48);
+			}
+			
+		</style>
+	</head>
+	<script>
+		window.onload=function ()
+		{
+		window.addEventListener('selectstart', function(e)
+		{
+		  e.preventDefault();
+		});
+			if (/(Android)/i.test(navigator.userAgent)) {
+			        var h1=document.querySelectorAll("h1")
+			        var p = document.querySelectorAll("p")
+					var a1 = document.querySelector("#a1")
+					a1.style.fontSize=4.8+"vw"
+					for(var i = 0;i<h1.length;i++){
+						h1[i].style.fontSize=10+"vw"
+					}
+					for(var a = 0;i<p.length;a++){
+						p[a].style.fontSize=7+"vw"
+					}
+					
+					}
+			
+			
+		}
+	</script>
+	<body>
+		<h1>关于游戏</h1>
+		<p>------游戏版本:2.0</p>
+		<p>游戏目前只有<a href="https://yangtongyon.github.io/8" id="a1">https://yangtongyon.github.io/8</a>这一个域名</p>
+		<p>------游戏版本更新优先考虑PC端</p>
+		<p>------游戏问题将每周修复一次</p>
+		<p>------目前游戏制作人员较少游戏仅3~4周更新一次</p>
+		<p>------游戏2.0x版本更新将推迟到2024年春季</p>
+		<p>------游戏未来将更换网站域名</p>
+		<p>------游戏待游戏狩猎者模式出世及将游戏改为3D界面</p>
+		<p>------游戏目前将招募测试人员(目前已招募2名)</p>
+		<P>------游戏可在295684334@qq.com邮箱上请求加入制作组</P>
+		<p>最后祝大家游戏愉快!(2.0x版本将成为您的视觉盛宴!)</p>
+		<h1>游戏控制</h1>
+		
+		<p>------pc端:使用键盘上下键控制</p>
+
+
+			
+			<p>------安卓端:使用GUI界面按钮控制</p>
+		
+		<h1>游戏通关</h1>
+		<p>-------游戏进度条加载完成</p>
+		<p>-------不远不接即可</p>
+	</body>
+</html>

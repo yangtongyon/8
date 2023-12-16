@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>游戏公告</title>
+		<style>
+			body {
+			/*  overflow-y: hidden; /* 隐藏垂直滚动条 */
+			 overflow-x: hidden; /* 隐藏水平滚动条 */
+			}
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			h1{
+				
+				font-size:3vw;
+				color:salmon;
+				background:oldlace;
+			}
+			p{
+				font-size:2vw;
+			
+				
+			}
+		</style>
+	</head>
+	<script>
+		window.onload=function ()
+		{
+		window.addEventListener('selectstart', function(e)
+		{
+		  e.preventDefault();
+		});
+			if (/(Android)/i.test(navigator.userAgent)) {
+			        var h1=document.querySelectorAll("h1")
+			        var p = document.querySelectorAll("p")
+					for(var i = 0;i<h1.length;i++){
+						h1[i].style.fontSize=9+"vw"
+					}
+					for(var a = 0;i<p.length;a++){
+						p[a].style.fontSize=4+"vw"
+					}
+					}
+			
+			
+		}
+	</script>
+	<body>
+		<h1>一.吴良启大逃杀</h1>
+		<p>1.游戏已更新至2.0版本</p>
+		<p>2.优化用户体验与游戏内容</p>
+		<h1>二.游戏更新内容</h1>
+		<p>1.更新游戏开始界面</p>
+		<p>2.更新游戏玩法</p>
+		<p>3.游戏更新支持PC端和安卓端</p>
+		<h1>三.新游戏预告</h1>
+		<p>1.游戏将在余后版本新增游戏关卡</p>
+		<p>2.游戏将在2.0x版本更新双人模式</p>
+		<p>3.游戏狩猎者模式敬请期待！</p>
+		<h1>四.游戏预将发展趋向</h1>
+		<p>1.游戏将在2.0x及余后版本改进游戏界面</p>
+		<p>2.游戏将重点改进用户界面体验---（如背景音乐）</p>
+		<p>3.游戏将把现有游戏从2D转向3D开发</p>
+		<h1>五.游戏开发人员</h1>
+		<p>特别声明:----黎平八中716开发组</p>
+		<h1>2.0x版本预告</h1>
+		<p>1.更新更美观的游戏界面</p>
+		<img src="E:\新建文件夹\lw.png" alt="">
+		<p>2.更加惊险刺激的双人模式和狩猎者模式</p>
+		<img src="E:\新建文件夹\lw2.png" alt="">
+		<p>3.更加丰富的游戏内容</p>
+		
+	</body>
+</html>

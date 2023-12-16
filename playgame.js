@@ -386,7 +386,7 @@ chuko3.style.background="green"
 		if(((playerTOP>chukoTop-5)&&(playerTOP-chukoTop<40))&&((playerLEFT>chukoLeft-5)&&(playerLEFT-chukoLeft<40)))
 		{
 		wldsd=2
-		chuko3Width+=0.05
+		chuko3Width+=0.01
 		chuko3.style.width=chuko3Width+"px"
 		if(chuko3Width>chuko2Width){
 		chuko3Width-=0.01

@@ -1,14 +1,90 @@
-<style>
-h1{
-color:yellow;
-font-size:3vw;
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>吴良启大逃杀</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				overflow-y: hidden; /* 隐藏垂直滚动条 */
+				overflow-x: hidden; /* 隐藏水平滚动条 */   
+			}
+			body
+			{
+			cursor: pointer;
+				 
+				font-family:Arial;
+				
+			}
+			tr,td{
+			
+				border:4px solid gold;
+				background:gray;
+				background:#fff56bc4;
+				color: coral;
+			}
+			.play{
+				display:none;
+			}
+			td:hover{
+				border:5px solid chocolate;
+				background:navajowhite;
+			}
+			td:active
+			{
+				background:indianred;
+				border:5px solid coral;
+			}
+			#h1{
+				position: absolute;
+				display: none;
+				
+			}
+		</style>
+	</head>
+	<script src="one.js"></script>
+	<script  src="alert.js"></script>
+	<script src="tanchuang.js"></script>
+	<script>
+		window.addEventListener('selectstart', function(e) 
+		{
+		  e.preventDefault();
+		});
+	   function pygamegogao()
+	   {
+		   window.open("1.html","_blank")
+	   }
+	   function pygameguanyu()
+	   {
+	   		window.open("2.html","_blank")
 }
-#ok{
-	font-size:6vw;
-}	
-</style>
-<h1 id="ok">404</h1>
-<h1>
-游戏正在更新中！！！
-</h1>
-<h1>2.0版本将于12月16日上线</h1>
+
+	</script>
+	<body>
+		<h1 id="h1">吴良启大逃杀</h1>
+		<div class="play">
+			
+		<table id="table">
+			
+		    <tr>
+		        <td>开始游戏</td>
+		    </tr>
+		    <tr>
+		        <td onclick="pygamegogao()">游戏公告</td>
+		    </tr>
+			<tr>
+			    <td onclick="pygameguanyu()">关于游戏</td>
+			</tr>
+		</table>
+		</div>
+	<script>
+		var playgame=document.querySelector("td")
+		playgame.onclick=function (){
+			playgame()
+		}
+	</script>
+	<script src="playgame.js"></script>
+	<script src="game.js"></script>
+	</body>
+</html>

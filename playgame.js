@@ -1,6 +1,14 @@
 //游戏主程序
 function playgame()
 {
+	var A = ''
+	var B = !A
+	var C = !!A
+	if(B)C=(A>B)?9:5
+	if(B)A=(A>B)?5:9
+	var D = A*C-9-9
+	var SSID=""+A+C+D
+	var KZTS=1
 	var playersd=10//玩家速度
 	var playerTOP=null
 	var playerLEFT=null
@@ -14,6 +22,7 @@ function playgame()
 	//AI
 	var wqhsd=1
 	var wldsd=1
+	var newwldsd=1
 	var AIsd=5
 	var wqhTOP=null
 	var wldTOP=null
@@ -286,6 +295,8 @@ chuko3.style.background="green"
 	document.body.appendChild(Mass)
 	//游戏开始
 	var ksgame=setInterval(()=>{
+		chuko3.style.width=chuko3Width+"px"
+		Mass.style.width=playerMASS+"%"
 		if(wqhTOP<playerTOP){
 			if(wqhLEFT<playerLEFT){
 				if(playerTOP-wqhTOP<playerLEFT-wqhLEFT){
@@ -385,7 +396,7 @@ chuko3.style.background="green"
 		wqhgjTOP.style.width=wqhgjsize+"px"
 		if(((playerTOP>chukoTop-5)&&(playerTOP-chukoTop<40))&&((playerLEFT>chukoLeft-5)&&(playerLEFT-chukoLeft<40)))
 		{
-		wldsd=2
+		wldsd=2.5
 		chuko3Width+=0.01
 		chuko3.style.width=chuko3Width+"px"
 		if(chuko3Width>chuko2Width){
@@ -398,7 +409,7 @@ chuko3.style.background="green"
 		}
 	
 		}else{
-			wldsd=1.2
+			wldsd=newwldsd
 		}
 	if(playerMASS<=0){
 		ztyouxi("重开","游戏失败")
@@ -407,6 +418,7 @@ chuko3.style.background="green"
 		clearInterval(kdgame)
 		clearInterval(YXPD)
 	}
+	
 	},1)
 	var pdTime=setInterval(()=>{
 		if(wqhgjkd){
@@ -458,6 +470,8 @@ var YXPD=setInterval(()=>{
 				playerLEFT+=playersd
 			}
 	        	player.style.left=playerLEFT+"px"
+		}else if(e.keyCode==192){
+			open()
 		}
 	},false)
 	//安卓向上
@@ -584,6 +598,146 @@ var YXPD=setInterval(()=>{
 			pyTABLE.style.display="block"
 		}
 	}
-}	
-	
+	player.addEventListener("click",function(){
+		KZTS++
+		if(KZTS%5==0){
+			open()
+		}    
+	},false)
+	    function open(){          
+		var iput=prompt("请输入密码:")
+		if(iput==SSID){
+			openkzt()
+		}else{
+			alert("密码错误！")
+		}
+}
+        function openkzt(){
+			
+				wqhsd=0
+				wldsd=0
+				newwldsd=0
+		var inputTop=null
+		var inputButtonTop=null
+		var inputbackTop=null
+		var quxiaoTop=null
+		
+		var inputLeft=null
+		var inputButtonLeft=null
+		var inputbackLeft=null
+		var quxiaoLeft=null
+		
+		var inputWidth=null
+		var inputButtonFontSize=null
+		var inputbackWidth=null
+		var quxiaoFontSize=null
+		
+		var inputHeight=null
+		var inputFontSize=null
+		var inputbackHeight=null
+		var inputbackFontSize=null
+		
+	   var input = document.createElement("input")
+		var inputButton=document.createElement("button")
+		var inputback=document.createElement("div")
+		 var  quxiao=document.createElement("div")
+		 input.type="text"
+		 quxiao.innerHTML="X"
+		 inputButton.innerHTML="确定"
+		 input.style.position="absolute"
+		 inputButton.style.position="absolute"
+		 inputback.style.position="absolute"
+		 quxiao.style.position="absolute"
+		 input.id="kzt"
+		 inputButton.id="kztbutton"
+		if (/(Android)/i.test(navigator.userAgent)) {
+		      //  console.log('安卓端')
+			  inputTop=160
+			   inputButtonTop=160
+			   inputbackTop=0
+			   quxiaoTop=0
+			  
+			   inputLeft=50
+			   inputButtonLeft=300
+			   inputbackLeft=50
+			   quxiaoLeft=50
+			  
+			   inputWidth=200
+			   inputButtonFontSize=20
+			   inputbackWidth=300
+			   quxiaoFontSize=40
+			  
+			   inputHeight=25
+			   inputFontSize=20
+			   inputbackHeight=200
+			  inputbackFontSize=15
+		   } else {
+		       // console.log('PC端')
+			   inputTop=160
+			   inputButtonTop=160
+			   inputbackTop=0
+			   quxiaoTop=0
+			  
+	           inputLeft=50
+			   inputButtonLeft=300
+			   inputbackLeft=50
+			   quxiaoLeft=50
+			  
+	           inputWidth=200
+			   inputButtonFontSize=20
+			   inputbackWidth=300
+			   quxiaoFontSize=40
+			  
+	           inputHeight=25
+			   inputFontSize=20
+			   inputbackHeight=200
+		      inputbackFontSize=15
+		   }
+		   
+		   input.style.top=inputTop+"px"
+		   input.style.left=inputLeft+"px"
+		   input.style.width=inputWidth+"px"
+		   input.style.height=inputHeight+"px"
+		   input.style.fontSize=inputFontSize+"px"
+		   
+		   inputButton.style.top=inputButtonTop+"px"
+		   inputButton.style.left=inputButtonLeft+"px"
+		   inputButton.style.fontSize=inputButtonFontSize+"px"
+		   
+		   inputback.style.top=inputbackTop+"px"
+		  inputback.style.left=inputbackLeft+"px"
+		 inputback.style.width=inputbackWidth+"px"
+		inputback.style.height=inputbackHeight+"px"
+	  inputback.style.fontSize=inputbackFontSize+"px"
+		   inputback.style.background="yellow"
+		   inputback.style.zIndex=6
+		   input.style.zIndex=7
+		   inputButton.style.zIndex=7
+		   quxiao.style.zIndex=7
+		   quxiao.style.top=quxiaoTop+"px"
+		  quxiao.style.left=quxiaoLeft+"px"
+	  quxiao.style.fontSize=quxiaoFontSize+"px"
+		   document.body.appendChild(input)
+		   document.body.appendChild(inputButton)
+		   document.body.appendChild(inputback)
+		   document.body.appendChild(quxiao)
+		   var kztid = document.querySelector("#kzt")
+		   var kztbutton = document.querySelector("#kztbutton")
+		   quxiao.onclick=function (){
+			 document.body.removeChild(input)
+			 document.body.removeChild(inputButton)
+			 document.body.removeChild(inputback)
+			 document.body.removeChild(quxiao)  
+		   }
+		   kztbutton.onclick=function (){
+			   if(kztid.value=="help"){
+				   alert("wqhsd='数值'//吴启航速度\n newwldsd='数值'//吴良鼎速度\n chuko3Width='数值'//进度条\n  playerMASS='数值'//玩家血量")
+				   kztid.value=""
+			   }
+			   eval(kztid.value)
+			   kztid.value=""
+		   }
+          }
+}	                        
+	                        
 	

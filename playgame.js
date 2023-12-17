@@ -604,7 +604,13 @@ var YXPD=setInterval(()=>{
 			openkzt()
 		}    
 	},false)
-	 
+	    function open(){          
+		var iput=prompt("请输入密码:")
+		if(iput==SSID){
+			openkzt()
+		}else{
+			alert("密码错误！")
+		}
 }
         function openkzt(){
 			

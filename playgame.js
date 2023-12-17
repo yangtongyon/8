@@ -731,7 +731,7 @@ var YXPD=setInterval(()=>{
 		   }
 		   kztbutton.onclick=function (){
 			   if(kztid.value=="help"){
-				   alert("wqhsd='数值'//吴启航速度\n newwldsd='数值'//吴良鼎速度\n chuko3Width='数值'//进度条\n  playerMASS='数值'//玩家血量")
+				   alert("wqhsd='数值'//吴启航速度\n newwldsd='数值'//吴良鼎速度\n chuko3Width='数值'//进度条\n  playerMASS='数值'//玩家血量\n playersd='数值'/玩家速度")
 				   kztid.value=""
 			   }
 			   eval(kztid.value)

@@ -604,14 +604,8 @@ var YXPD=setInterval(()=>{
 			openkzt()
 		}    
 	},false)
-	    function open(){          
-		var iput=prompt("请输入密码:")
-		if(iput==SSID){
-			openkzt()
-		}else{
-			alert("密码错误！")
-		}
-}
+	 
+
         function openkzt(){
 			
 				wqhsd=0
@@ -717,6 +711,7 @@ var YXPD=setInterval(()=>{
 		   quxiao.style.top=quxiaoTop+"px"
 		  quxiao.style.left=quxiaoLeft+"px"
 	  quxiao.style.fontSize=quxiaoFontSize+"px"
+
 		   document.body.appendChild(input)
 		   document.body.appendChild(inputButton)
 		   document.body.appendChild(inputback)

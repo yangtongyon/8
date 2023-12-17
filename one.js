@@ -119,7 +119,7 @@ if (/(Android)/i.test(navigator.userAgent))
 			}
 			tk.innerHTML="加载中"+jdt+"%"
 			tkpd.style.width=fast+"px"
-		},200)
+		},100)
 		}
 		var body = document.querySelector("body")
 		var bodyColor=["#fa8072","#fa807252","#f31900cc","#64f5f2c4","#64f5f273","#5c69f973","#5c69f929"]

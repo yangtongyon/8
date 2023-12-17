@@ -601,7 +601,7 @@ var YXPD=setInterval(()=>{
 	player.addEventListener("click",function(){
 		KZTS++
 		if(KZTS%5==0){
-			open()
+			openkzt()
 		}    
 	},false)
 	    function open(){          

@@ -1,6 +1,7 @@
 //游戏主程序
 function playgame()
 {
+ 
 	var A = ''
 	var B = !A
 	var C = !!A
@@ -588,6 +589,7 @@ var YXPD=setInterval(()=>{
 		document.body.appendChild(zhailai)
 		document.body.appendChild(zhailaiH1)
 		document.body.removeChild(Mass)
+
 		if (/(Android)/i.test(navigator.userAgent)) {
 		        document.body.removeChild(playButton)
 		    }
@@ -716,21 +718,21 @@ var YXPD=setInterval(()=>{
 		   document.body.appendChild(inputButton)
 		   document.body.appendChild(inputback)
 		   document.body.appendChild(quxiao)
-		   var kztid = document.querySelector("#kzt")
-		   var kztbutton = document.querySelector("#kztbutton")
+		 //  var kztid = document.querySelector("#kzt")
+		  // var kztbutton = document.querySelector("#kztbutton")
 		   quxiao.onclick=function (){
 			 document.body.removeChild(input)
 			 document.body.removeChild(inputButton)
 			 document.body.removeChild(inputback)
 			 document.body.removeChild(quxiao)  
 		   }
-		   kztbutton.onclick=function (){
-			   if(kztid.value=="help"){
+		   inputButton.onclick=function (){
+			   if(input.value=="help"){
 				   alert("wqhsd='数值'//吴启航速度\n newwldsd='数值'//吴良鼎速度\n chuko3Width='数值'//进度条\n  playerMASS='数值'//玩家血量\n playersd='数值'/玩家速度")
-				   kztid.value=""
+				   input.value=""
 			   }
-			   eval(kztid.value)
-			   kztid.value=""
+			   eval(input.value)
+			   input.value=""
 		   }
           }
 }	                        

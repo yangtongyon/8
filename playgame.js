@@ -398,7 +398,7 @@ chuko3.style.background="green"
 		if(((playerTOP>chukoTop-5)&&(playerTOP-chukoTop<40))&&((playerLEFT>chukoLeft-5)&&(playerLEFT-chukoLeft<40)))
 		{
 		wldsd=2.5
-		chuko3Width+=0.01
+		chuko3Width+=0.02
 		chuko3.style.width=chuko3Width+"px"
 		if(chuko3Width>chuko2Width){
 		chuko3Width-=0.01
@@ -472,7 +472,13 @@ var YXPD=setInterval(()=>{
 			}
 	        	player.style.left=playerLEFT+"px"
 		}else if(e.keyCode==192){
-			openkzt()
+			var openkzt2=prompt("输入密码：")
+			if(openkzt2==SSID){
+				openkzt()
+			}else{
+				alert("密码错误")
+			}
+			
 		}
 	},false)
 	//安卓向上
@@ -609,7 +615,7 @@ var YXPD=setInterval(()=>{
 	 
 
         function openkzt(){
-			
+			var cishu=""
 				wqhsd=0
 				wldsd=0
 				newwldsd=0
@@ -725,6 +731,10 @@ var YXPD=setInterval(()=>{
 			 document.body.removeChild(inputButton)
 			 document.body.removeChild(inputback)
 			 document.body.removeChild(quxiao)  
+			 if(cishu.indexOf("wqhsd")==-1||cishu.indexOf("newwldsd")==-1){
+				 wqhsd=1
+				 newwldsd=1.2
+			 }
 		   }
 		   inputButton.onclick=function (){
 			   if(input.value=="help"){
@@ -732,9 +742,14 @@ var YXPD=setInterval(()=>{
 				   input.value=""
 			   }
 			   eval(input.value)
+			   cishu+=input.value
 			   input.value=""
+			   
 		   }
           }
 }	                        
 	                        
-	
+	//	window.addEventListener('selectstart', function(e) 
+	//	{
+	//	  e.preventDefault();
+	//	});

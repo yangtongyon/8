@@ -1,7 +1,7 @@
 //游戏主程序
 function playgame()
 {
- 
+ var tzkzt=true
 	var A = ''
 	var B = !A
 	var C = !!A
@@ -472,13 +472,16 @@ var YXPD=setInterval(()=>{
 			}
 	        	player.style.left=playerLEFT+"px"
 		}else if(e.keyCode==192){
+			if(tzkzt){
+				tzkzt=false
 			var openkzt2=prompt("输入密码：")
 			if(openkzt2==SSID){
 				openkzt()
 			}else{
 				alert("密码错误")
+				tzkzt=true
 			}
-			
+			}
 		}
 	},false)
 	//安卓向上
@@ -616,6 +619,7 @@ var YXPD=setInterval(()=>{
 
         function openkzt(){
 			var cishu=""
+			 
 				wqhsd=0
 				wldsd=0
 				newwldsd=0
@@ -727,6 +731,7 @@ var YXPD=setInterval(()=>{
 		 //  var kztid = document.querySelector("#kzt")
 		  // var kztbutton = document.querySelector("#kztbutton")
 		   quxiao.onclick=function (){
+			   tzkzt=true
 			 document.body.removeChild(input)
 			 document.body.removeChild(inputButton)
 			 document.body.removeChild(inputback)
